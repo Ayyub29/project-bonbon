@@ -17,10 +17,15 @@ setInterval(function(){
     lines();
 }, 200);
 
-//Linking to Yes and page
-function yesFunction() {
-    window.location.href = "../Page 7/no2.html";
-}
 function noFunction() {
     window.location.href = "../Page 5/yes.html";
+}
+
+function moveButton() {
+    const btn = document.getElementById('reject');
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 60);
+    btn.style.position = 'fixed';
+    btn.style.left = x + 'px';
+    btn.style.top = y + 'px';
 }

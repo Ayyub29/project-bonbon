@@ -85,7 +85,7 @@ h1 {
   z-index: 1;
 }
 
-#no {
+#reject {
   width: 200px;
   height: 150px;
   font-size: 50px;
@@ -104,4 +104,13 @@ h1 {
 .watermark a {
   text-decoration: none;
   color: rgb(243, 214, 214);
+}
+
+.containers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(248, 248, 248);
 }

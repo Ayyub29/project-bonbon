@@ -32,8 +32,23 @@ function resetBG(){
 
 //Linking to Yes and page
 function yesFunction() {
-    window.location.href = "../Page 5/yes.html";
-}
-function noFunction() {
     window.location.href = "../Page 6/no1.html";
+}
+
+window.addEventListener('DOMContentLoaded', () =>{
+    const button = document.getElementById('reject')
+
+    button.addEventListener('mouseover', () => {
+        button.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
+        button.style.bottom = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
+    });
+});
+
+function moveButton() {
+    const btn = document.getElementById('reject');
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 60);
+    btn.style.position = 'fixed';
+    btn.style.left = x + 'px';
+    btn.style.top = y + 'px';
 }

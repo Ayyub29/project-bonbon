@@ -13,6 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "../Page 3/forthPage.html";
   }
 
+  const btn = document.getElementById('disable');
+
+  btn.addEventListener('click', function() {
+      // Add wait cursor
+      btn.style.cursor = 'wait';
+      btn.disabled = true;
+
+      // Remove after X seconds
+      setTimeout(function() {
+          btn.style.cursor = 'default';
+          btn.disabled = false;
+      }, 600000); // 5000ms = 5 seconds
+  });
+
   // Call the showClickableButton function after 3 seconds
   setTimeout(showClickableButton, 3000);
 
